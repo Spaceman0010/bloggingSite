@@ -1,0 +1,27 @@
+<%- include("partial/header.ejs") %>
+
+<h1>Home </h1>
+<p> <%= homeContent %> </p>
+
+    
+<%  sendInputs.forEach(sendInput => { %> 
+   
+    <h1> <%= sendInput.blogTitle %> </h1>
+    <p> 
+        <%= sendInput.blogPost.substring(0, 100) + " ..." %> 
+        <a href="/posts/<%= sendInput.blogTitle %>">Read More</a>
+    </p>
+
+<% }); %>
+    
+<%- include("partial/footer.ejs") %>
+
+
+
+    <!-- for (var i=0; i<sendInputs.length; i++){
+        console.log(sendInputs[i].blogTitle); 
+    }
+    --> 
+    
+
+
